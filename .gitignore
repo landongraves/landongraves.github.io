@@ -1,0 +1,10 @@
+node_modules/
+dist/
+
+# Local source/archive copies; the browser-ready model lives in public/.
+/gun.glb
+/gun(2).glb
+/gun.zip
+
+.DS_Store
+*.log
