@@ -1,7 +1,10 @@
 node_modules/
 dist/
+/assets/
+/404.html
+/malie-qw-resume.txt
 
-# Local source/archive copies; the browser-ready model lives in public/.
+# Local source/archive copies; the optimized production model lives in public/models/.
 /gun.glb
 /gun(2).glb
 /gun.zip

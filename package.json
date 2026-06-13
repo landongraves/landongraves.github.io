@@ -1,18 +1,24 @@
 {
-  "name": "malie-qw-portfolio",
+  "name": "malieqw-portfolio",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:pages": "npm run build && cp dist/index.html dist/404.html",
+    "check": "npm run build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@vitejs/plugin-react": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "three": "^0.184.0",
-    "vite": "latest"
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
+    "three": "0.184.0"
+  },
+  "devDependencies": {
+    "vite": "8.0.16"
+  },
+  "engines": {
+    "node": ">=20.19.0"
   }
 }

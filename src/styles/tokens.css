@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,600&display=swap");
+
+:root {
+  --paper: #eeeee8;
+  --paper-deep: #e3e3dc;
+  --ink: #18211d;
+  --muted: #6d746f;
+  --line: rgba(24, 33, 29, 0.2);
+  --sage: #b8c8b5;
+  --lime: #dce8ad;
+  --blue: #b7c8d0;
+  --clay: #d2aa92;
+  --dark: #17201c;
+  --serif: "Playfair Display", Georgia, serif;
+  --sans: "Manrope", Arial, sans-serif;
+  --mono: "DM Mono", monospace;
+  --page-padding: clamp(24px, 5vw, 84px);
+  --ease-out: cubic-bezier(.2, .75, .25, 1);
+}
