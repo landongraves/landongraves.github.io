@@ -668,6 +668,22 @@ document.addEventListener("keydown", function(e) {
 document.addEventListener("DOMContentLoaded", function() {
   var closeBtn = document.getElementById("panel-close");
   if (closeBtn) closeBtn.addEventListener("click", closePanel);
+
+  var dockSearch = document.getElementById("dock-search");
+  var dockCenter = document.getElementById("dock-center");
+  var dockNotes = document.getElementById("dock-notes");
+  var dockTheme = document.getElementById("dock-theme");
+
+  if (dockSearch) dockSearch.addEventListener("click", function() {
+    var searchInput = document.getElementById("search-input");
+    if (searchInput) {
+      searchInput.focus();
+      searchInput.select();
+    }
+  });
+  if (dockCenter) dockCenter.addEventListener("click", zoomToFill);
+  if (dockNotes) dockNotes.addEventListener("click", toggleNotesPanel);
+  if (dockTheme) dockTheme.addEventListener("click", goDark);
 });
 
 // Canvas click: close panel when clicking the SVG background (not a node)

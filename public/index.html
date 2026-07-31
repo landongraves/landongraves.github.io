@@ -172,6 +172,28 @@
       <div id="notes-panel-body"></div>
     </div>
 
+    <!-- Bottom edge dock -->
+    <nav id="bottom-dock" aria-label="Quick actions">
+      <button class="dock-action" id="dock-search" type="button" aria-label="Search tools" title="Search tools">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path></svg>
+        <span>Search</span>
+      </button>
+      <button class="dock-action" id="dock-center" type="button" aria-label="Recenter framework" title="Recenter framework">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M12 3v3M12 18v3M3 12h3M18 12h3"></path></svg>
+        <span>Center</span>
+      </button>
+      <div class="dock-divider" aria-hidden="true"></div>
+      <button class="dock-action" id="dock-notes" type="button" aria-label="Open notes" title="Open notes">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h9l3 3V20.5H6z"></path><path d="M15 3.5v3h3M9 11h6M9 15h6"></path></svg>
+        <span>Notes</span>
+      </button>
+      <button class="dock-action" id="dock-theme" type="button" aria-label="Toggle color theme" title="Toggle color theme">
+        <svg class="dock-theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.5 15.2A8 8 0 0 1 8.8 4.5 8 8 0 1 0 19.5 15.2Z"></path></svg>
+        <svg class="dock-theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5"></circle><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M18.7 5.3l-1.4 1.4M6.7 17.3l-1.4 1.4"></path></svg>
+        <span>Theme</span>
+      </button>
+    </nav>
+
   </body>
 
 </html>

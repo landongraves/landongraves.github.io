@@ -386,6 +386,107 @@ a {
   margin-top: 0;
 }
 
+/* Bottom edge dock — attached directly to the viewport like an inverted notch */
+#bottom-dock {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  z-index: 150;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 62px;
+  padding: 8px 12px max(8px, env(safe-area-inset-bottom));
+  color: #f7f7f7;
+  background: rgba(8, 8, 10, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-bottom: 0;
+  border-radius: 24px 24px 0 0;
+  box-shadow: 0 -10px 36px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(22px) saturate(150%);
+  -webkit-backdrop-filter: blur(22px) saturate(150%);
+  transform: translateX(-50%);
+}
+
+#bottom-dock::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  width: 34px;
+  height: 3px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.17);
+  transform: translateX(-50%);
+}
+
+.dock-action {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  width: 58px;
+  min-height: 48px;
+  padding: 5px 4px 2px;
+  color: rgba(255, 255, 255, 0.68);
+  background: transparent;
+  border: 0;
+  border-radius: 14px;
+  font-family: var(--font-family);
+  cursor: pointer;
+  transition: color 160ms ease, background 160ms ease, transform 160ms ease;
+}
+
+.dock-action:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.dock-action:active {
+  transform: translateY(0) scale(0.96);
+}
+
+.dock-action:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 1px;
+}
+
+.dock-action svg {
+  width: 21px;
+  height: 21px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.dock-action span {
+  font-size: 9px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.01em;
+}
+
+.dock-divider {
+  width: 1px;
+  height: 30px;
+  margin: 0 3px;
+  background: rgba(255, 255, 255, 0.13);
+}
+
+.dock-theme-sun,
+body.light-mode .dock-theme-moon {
+  display: none;
+}
+
+body.light-mode .dock-theme-sun {
+  display: block;
+}
+
 /* === Mobile responsive === */
 @media (max-width: 768px) {
   #header {
@@ -420,7 +521,7 @@ a {
 
   /* Floating notes button (mobile only) */
   #mobile-notes-btn {
-    display: block;
+    display: none;
     position: fixed;
     bottom: var(--space-4);
     left: 50%;
@@ -446,5 +547,25 @@ a {
   #notes-panel {
     width: 100vw;
     box-shadow: none;
+  }
+
+  #bottom-dock {
+    width: min(100% - 32px, 310px);
+    justify-content: center;
+    min-height: 58px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 22px 22px 0 0;
+  }
+
+  .dock-action {
+    flex: 1;
+    width: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dock-action {
+    transition: none;
   }
 }
