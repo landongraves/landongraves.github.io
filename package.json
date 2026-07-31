@@ -1,25 +1,25 @@
 {
-  "name": "arf",
+  "name": "landongraves-site",
   "version": "1.0.0",
-  "description": "Advanced Reconnaissance Framework",
-  "main": "public/index.html",
+  "description": "Personal website and web projects for Landon Graves",
+  "main": "index.html",
   "scripts": {
     "postinstall": "copyfiles -f ./node_modules/d3/dist/d3.min.js ./public/js/",
-    "dev": "cd ./public; python3 -m http.server 8000",
-    "start": "cd ./public; python3 -m http.server 8000",
+    "dev": "python3 -m http.server 8000",
+    "start": "python3 -m http.server 8000",
     "deploy": "wrangler deploy",
     "preview": "wrangler dev"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lockfale/OSINT-Framework.git"
+    "url": "git+https://github.com/landongraves/landongraves.github.io.git"
   },
-  "author": "Justin Nordine (s0lray)",
-  "license": "",
+  "author": "Landon Graves",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lockfale/OSINT-Framework/issues"
+    "url": "https://github.com/landongraves/landongraves.github.io/issues"
   },
-  "homepage": "https://github.com/lockfale/OSINT-Framework#readme",
+  "homepage": "https://landongraves.github.io",
   "devDependencies": {
     "copyfiles": "^1.0.0",
     "d3": "^7.9.0",
